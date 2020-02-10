@@ -21,42 +21,49 @@ rOpenSci Packages: Development, Maintenance, and Peer Review'"
 twitterImg: img/blog-images/2019-05-16-dev-guide-update/cover.png
 ---
 
+rOpenSci Software Peer Review's guidance has been compiled in [an online book](https://devguide.ropensci.org/) for more than one year now. We've just released its fourth version. 
+To find out what's new in our dev guide 0.4.0!, you can [read the changelog](https://devguide.ropensci.org/booknews.html), 
+or this blog post for more digested information.
+
 ## New security guidance
 
- add more guidance about secrets and package development in the security chapter.
+Our dev guide always has had a chapter called [" Package Development Security Best Practices"](https://devguide.ropensci.org/package-development-security-best-practices.html) but it used to be quite empty. 
+We've now added more guidance about secrets and package development, including links to useful resources-
  
- For further discussion on the same topic, see [this `vcr` issue about making tests pass in PRs in the absence of necessary secrets](https://github.com/ropensci/vcr/issues/137) 
+For further discussion on the same topic, see [this `vcr` issue about making tests pass in PRs in the absence of necessary secrets](https://github.com/ropensci/vcr/issues/137) 
 
 ## Policy and governance changes
 
 ### Policy changes
 
-add field and laboratory reproducibility tools as a category in scope.
+We've added field and laboratory reproducibility tools as a category in [scope](https://devguide.ropensci.org/policies.html#aims-and-scope). 
+_Packages that improve reproducibility of real-world workflows through standardization and automation of field and lab protocols, such as sample tracking and tagging, form and data sheet generation, interfacing with laboratory equipment or information systems, and executing experimental designs. (Example: [baRcodeR](https://docs.ropensci.org/baRcodeR/))_
 
-add guidance for off-thread interaction and COIs ([`@noamross`](https://github.com/noamross), #197).
+{{< tweet 1183811515067043840 >}}
+
+Our [reviewer guide](https://devguide.ropensci.org/reviewerguide.html) now includes guidance for off-thread interactions. We're glad for community building but don't want any important information to get lost.
+_If you interact with the package authors and talked about the review outside a review thread (in chats, DMs, in-person, issues in the project repository), please make sure that your review captures and/or links to elements from these conversations that are relevant to the process._
 
 ### Submission form amendments
 
-explicit mention of roxygen2. See https://yihui.org/rd2roxygen/
+Our [issue template for submissions](https://github.com/ropensci/software-review/blob/master/.github/ISSUE_TEMPLATE/A-submit-software-for-review.md) now:
 
-explicit mention of the packaging guide and guide for authors
+* explicitly mentions [`roxygen2`](https://roxygen2.r-lib.org/). If you used to write documentation the hard way, you can convert it using [`rd2roxygen`]( https://yihui.org/rd2roxygen/)
 
-explicit mention of Bioconductor like CRAN
+* explicitly mentions the packaging guide and guide for authors
+
+* asks whether the submitted package is intented to go on Bionconductor, similarly to what's asked for CRAN.
 
 ### Editor guidance
 
-rephrase the EiC role (#244). tl;dr editors trust the EiC and are busy. :-)
+We've updated the [Editor-in-chief role description](https://devguide.ropensci.org/editorguide.html#eicchecklist) to better describe current practice. tl;dr: editors trust the EiC and are busy.
  
-add more guidance for the editor in charge of a dev guide release (#196, #205).
-
-add guidance in the editor guide about not transferred repositories.
+We've improved the [guidance for the editor in charge of a dev guide release](https://devguide.ropensci.org/editorguide.html#bookrelease).
  
 ### How (not) to acknowledge rOpenSci
- 
- remove the recommendation to add rOpenSci footer (https://github.com/ropensci/software-review-meta/issues/79).
 
-remove the recommendation to add a review mention to DESCRIPTION but recommends mentioning the package version when reviewers are added as "rev" authors.
-
+Packages that have been reviewed can [include reviewers as authors](/blog/2018/03/16/thanking-reviewers-in-metadata/) and their README features a peer-review badge. 
+We've removed the requirement to add the rOpenSci footer, especially as it's not used on [deployed documentation website that automatically get the same footer as our website](https://ropensci.org/technotes/2019/06/07/ropensci-docs/).
 
 ## Package documentation
 
@@ -80,31 +87,40 @@ document the use of mathjax with rotemplate ([`@Bisaloo`](https://github.com/Bis
 
 ### CRAN gotchas
 
-Quite cool that those were contributed by package authors to lessen the probability of other authors' mixing the policies.
+We've added two [CRAN gotchas](https://devguide.ropensci.org/building.html#crangotchas). It's especially nice that those were contributed by package authors to lessen the probability of other authors' missing the policies. The gotchas are:
 
-add one CRAN gotcha: single quoting software names(#245, [`@aaronwolen`](https://github.com/aaronwolen))
+* In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*).  Thanks [Aaron Wolen](https://github.com/aaronwolen)).
 
-add new CRAN gotcha about having 'in R' or 'with R' in your package title ([`@bisaloo`](https://github.com/Bisaloo), ropensci/dev_guide#221)
+* Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this. Thanks to [Hugo Gruson](https://github.com/Bisaloo).
 
 ### Forum guidance
 
-clarify forum guidance (for use cases and in general).
-
+We've clarified how to use rOpenSci forum in the [collaboration guide](https://devguide.ropensci.org/collaboration.html) and in the chapter about [marketing your package](https://devguide.ropensci.org/marketing.html).
 
 ### Package dependencies
 
-add advice on specifying dependency minimum versions ([`@karthik`](https://github.com/karthik), [`@annakrystalli`](https://github.com/annakrystalli), #185).
+We've added advice on specifying dependency minimum versions and on Bioconductor dependencies in [the section about package dependencies](https://devguide.ropensci.org/building.html#package-dependencies).
 
-Bioconductor
- 
 ## Meta: changes in deployment
 
 ### GitHub actions
 
-start using GitHub actions instead of Travis for deployment.
+We've started using GitHub Actions instead of Travis for deployment. We've got three workflows
 
- hvitfeldt.me/blog/bookdown-netlify-github-actions (that I didn't use, but that is a very thorough walkthrough) and speakerdeck.com/jimhester/github-actions-for-r.
+* whenever there's a push to master, the book is built on Travis to a _book folder whose content is then pushed to the gh-pages branch that's the source for [our production book](https://devguide.ropensci.org).
+
+* whenever there's a push to dev, the book is built on Travis to a _book folder whose content is then pushed to the dev-site branch that's the source for our [dev book](https://devguide.netlify.com).
+
+* whenever there's a commit in a PR from a repo that has `NETLIFY_SITE_ID` as secret i.e. most often the same repo and not forks, the book is built, deployed to Netlify, and a commit comment allows to find the preview URL. Getting the preview for any PR was the main motivation for our exploring a different deploy method. 
+
+If you want to know more about GitHub actions for R, we recommend [Jim Hester's slidedeck](https://speakerdeck.com/jimhester/github-actions-for-r) and [Emil Hvitfeldt's thorough walkthrough "Deploy your bookdown project to Netlify with Github Actions"](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/). You can also explore [our workflows](https://github.com/ropensci/dev_guide/tree/dev/.github/workflows).
  
 ### URL checking
 
-Mention the script checking URLs now use commonmark instead of regular expressions, and add a link to ropensci.org/technotes/2019/12/19/urls-tidying
+Our [script checking URLs](https://github.com/ropensci/dev_guide/blob/master/inst/book_grooming.R) now uses commonmark instead of regular expressions. If you're interesting in programmatic URL cleaning, you can also read [the recent rOpenSci tech note about cleaning a website URLs with R](https://ropensci.org/technotes/2019/12/19/urls-tidying/).
+
+### Conclusion
+
+In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last 5 months. We are grateful for all contributions that made this release possible. 
+Although our release frequency has now slowed down, we are already working on updates for our next version, such as [how to deal with the documentation website documenting the development vs release version of a package](https://github.com/ropensci/dev_guide/issues/200). 
+Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
