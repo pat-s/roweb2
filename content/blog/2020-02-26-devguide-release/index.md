@@ -110,9 +110,9 @@ We've added advice on specifying dependency minimum versions and on Bioconductor
 
 We've started using GitHub Actions instead of Travis for deployment. We've got three workflows:
 
-* whenever there's a push to master, the book is built on Travis to a _book folder whose content is then pushed to the gh-pages branch that's the source for [our production book](https://devguide.ropensci.org).
+* whenever there's a push to master, the book is built in a `_book` folder whose content is then pushed to the `gh-pages` branch that's the source for [our production book](https://devguide.ropensci.org).
 
-* whenever there's a push to dev, the book is built on Travis to a _book folder whose content is then pushed to the dev-site branch that's the source for our [dev book](https://devdevguide.netlify.com).
+* whenever there's a push to dev, the book is built in a `_book` folder whose content is then pushed to the `dev-site` branch that's the source for our [dev book](https://devdevguide.netlify.com).
 
 * whenever there's a commit in a PR from a repo that has `NETLIFY_SITE_ID` as secret i.e. most often the same repo and not forks, the book is built, deployed to Netlify, and a commit comment allows to find the preview URL. Getting the preview for any PR was the main motivation for our exploring a different deploy method. 
 
