@@ -108,7 +108,7 @@ We've added advice on specifying dependency minimum versions and on Bioconductor
 
 #### GitHub actions
 
-We've started using GitHub Actions instead of Travis for deployment. We've got three workflows
+We've started using GitHub Actions instead of Travis for deployment. We've got three workflows:
 
 * whenever there's a push to master, the book is built on Travis to a _book folder whose content is then pushed to the gh-pages branch that's the source for [our production book](https://devguide.ropensci.org).
 
