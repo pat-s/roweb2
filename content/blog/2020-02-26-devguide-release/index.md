@@ -92,9 +92,9 @@ We've added [some elements helping package maintainers](https://devdevguide.netl
 
 We've added two [CRAN gotchas](https://devguide.ropensci.org/building.html#crangotchas). It's especially nice that those were contributed by package authors to lessen the probability of other authors' missing the policies. The gotchas are:
 
-* In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*).  Thanks [Aaron Wolen](https://github.com/aaronwolen)).
+* _In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*)._  Thanks [Aaron Wolen](https://github.com/aaronwolen).
 
-* Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [pkgdown documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this. Thanks to [Hugo Gruson](https://github.com/Bisaloo).
+* _Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [pkgdown documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this._ Thanks to [Hugo Gruson](https://github.com/Bisaloo).
 
 #### Forum guidance
 
