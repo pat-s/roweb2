@@ -22,12 +22,12 @@ twitterImg: img/blog-images/2019-05-16-dev-guide-update/cover.png
 ---
 
 rOpenSci Software Peer Review's guidance has been compiled in [an online book](https://devguide.ropensci.org/) for more than one year now. We've just released its fourth version. 
-To find out what's new in our dev guide 0.4.0!, you can [read the changelog](https://devguide.ropensci.org/booknews.html), 
+To find out what's new in our dev guide 0.4.0, you can [read the changelog](https://devguide.ropensci.org/booknews.html), 
 or this blog post for more digested information.
 
 ## New security guidance
 
-Our dev guide always has had a chapter called [" Package Development Security Best Practices"](https://devguide.ropensci.org/package-development-security-best-practices.html) but it used to be quite empty. 
+Our dev guide always has had a chapter called ["Package Development Security Best Practices"](https://devguide.ropensci.org/package-development-security-best-practices.html) but it used to be quite empty. 
 We've now added more guidance about secrets and package development, including links to useful resources-
  
 For further discussion on the same topic, see [this `vcr` issue about making tests pass in PRs in the absence of necessary secrets](https://github.com/ropensci/vcr/issues/137) 
@@ -63,25 +63,26 @@ We've improved the [guidance for the editor in charge of a dev guide release](ht
 ### How (not) to acknowledge rOpenSci
 
 Packages that have been reviewed can [include reviewers as authors](/blog/2018/03/16/thanking-reviewers-in-metadata/) and their README features a peer-review badge. 
-We've removed the requirement to add the rOpenSci footer, especially as it's not used on [deployed documentation website that automatically get the same footer as our website](https://ropensci.org/technotes/2019/06/07/ropensci-docs/).
+We've removed the requirement to add the rOpenSci footer, especially as it's not used on [deployed documentation website that automatically get the same footer as our website](/technotes/2019/06/07/ropensci-docs/).
 
 ## Package documentation
 
 ### Documentation 
 
-add note in Documentation sub-section of Packaging Guide section about referencing the new R6 support in roxygen2 (ropensci/dev_guide#189)
-
-slightly changes the advice on documentation re-use: add a con; mention `@includeRmd` and `@example`; correct the location of Rmd fragments (#230).
+The ["Documentation" section of the packaging guide](https://devguide.ropensci.org/building.html#documentation) now referencesthe new R6 support in roxygen2 and features slightly changed advice on documentation re-use: we added a con (_On the other hand, it means the docs are not readable "in-source" since they're in another file._); the guidance now mentions [`@includeRmd`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files) and [`@example`](https://blog.r-hub.io/2020/01/27/examples/#how-to-write-examples); we've corrected the location of [Rmd fragments](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/).
 
 ### Documentation website
 
-improve guidance regarding the replacement of "older" pkgdown website links and source (#241, [`@cboettig`](https://github.com/cboettig))
+All rOpenSci packages now have [a documentation website that's centrally build](/technotes/2019/06/07/ropensci-docs/).
+We've added [some elements helping package maintainers](https://devdevguide.netlify.com/building.html#website):
 
-add package logo guidance (#217).
+* [improved guidance regarding the replacement of "older" pkgdown website links and source](https://devguide.ropensci.org/approvaltemplate.html)
 
-mention an approach for pre-computing vignettes so that the pkgdown website might get build on rOpenSci docs server.
+* add package logo guidance. _To use your package logo in the pkgdown homepage, refer to [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html). If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci) will use rOpenSci logo instead._
 
-document the use of mathjax with rotemplate ([`@Bisaloo`](https://github.com/Bisaloo), #199).
+* *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
+
+* How to use of mathjax with `rotemplate`, thanks to [Hugo Gruson](https://github.com/Bisaloo).
 
 ## Misc
 
