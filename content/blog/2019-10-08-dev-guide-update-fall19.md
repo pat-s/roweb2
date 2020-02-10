@@ -15,6 +15,7 @@ categories: blog
 topicid: 1848
 tags:
   - Software Peer Review
+  - dev guide
 ---
 
 As [announced in February](/blog/2019/02/01/software-review-news/), we now have [an online book](https://devguide.ropensci.org/) containing all things related to rOpenSci software review. Our goal is to update it approximately quarterly - it's time to present the third version. You can [read the changelog](https://devguide.ropensci.org/booknews.html) or this blog post to find out what's new in our dev guide 0.3.0!
