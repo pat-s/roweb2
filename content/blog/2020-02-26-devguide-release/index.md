@@ -71,7 +71,7 @@ We've removed the requirement to add the rOpenSci footer, especially as it's not
 
 #### Documentation 
 
-The ["Documentation" section of the packaging guide](https://devguide.ropensci.org/building.html#documentation) now referencesthe new R6 support in roxygen2 and features slightly changed advice on documentation re-use: we added a con (_On the other hand, it means the docs are not readable "in-source" since they're in another file._); the guidance now mentions [`@includeRmd`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files) and [`@example`](https://blog.r-hub.io/2020/01/27/examples/#how-to-write-examples); we've corrected the location of [Rmd fragments](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/).
+The ["Documentation" section of the packaging guide](https://devguide.ropensci.org/building.html#documentation) now references the new R6 support in roxygen2 and features slightly changed advice on documentation re-use: we added a con (_On the other hand, it means the docs are not readable "in-source" since they're in another file._); the guidance now mentions [`@includeRmd`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files) and [`@example`](https://blog.r-hub.io/2020/01/27/examples/#how-to-write-examples); we've corrected the location of [Rmd fragments](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/).
 
 #### Documentation website
 
