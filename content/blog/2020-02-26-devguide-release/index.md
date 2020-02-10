@@ -28,11 +28,13 @@ or this blog post for more digested information.
 ## New security guidance
 
 Our dev guide always has had a chapter called ["Package Development Security Best Practices"](https://devguide.ropensci.org/package-development-security-best-practices.html) but it used to be quite empty. 
-We've now added more guidance about secrets and package development, including links to useful resources-
+We've now added more guidance about secrets and package development, including links to useful resources.
  
 For further discussion on the same topic, see [this `vcr` issue about making tests pass in PRs in the absence of necessary secrets](https://github.com/ropensci/vcr/issues/137) 
 
 ## Policy and governance changes
+
+Some aspects of the software review process changed.
 
 ### Policy changes
 
@@ -80,7 +82,7 @@ We've added [some elements helping package maintainers](https://devdevguide.netl
 
 * add package logo guidance. _To use your package logo in the pkgdown homepage, refer to [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html). If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci) will use rOpenSci logo instead._
 
-* *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
+* *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
 
 * How to use of mathjax with `rotemplate`, thanks to [Hugo Gruson](https://github.com/Bisaloo).
 
@@ -110,7 +112,7 @@ We've started using GitHub Actions instead of Travis for deployment. We've got t
 
 * whenever there's a push to master, the book is built on Travis to a _book folder whose content is then pushed to the gh-pages branch that's the source for [our production book](https://devguide.ropensci.org).
 
-* whenever there's a push to dev, the book is built on Travis to a _book folder whose content is then pushed to the dev-site branch that's the source for our [dev book](https://devguide.netlify.com).
+* whenever there's a push to dev, the book is built on Travis to a _book folder whose content is then pushed to the dev-site branch that's the source for our [dev book](https://devdevguide.netlify.com).
 
 * whenever there's a commit in a PR from a repo that has `NETLIFY_SITE_ID` as secret i.e. most often the same repo and not forks, the book is built, deployed to Netlify, and a commit comment allows to find the preview URL. Getting the preview for any PR was the main motivation for our exploring a different deploy method. 
 
@@ -118,7 +120,7 @@ If you want to know more about GitHub actions for R, we recommend [Jim Hester's 
  
 ### URL checking
 
-Our [script checking URLs](https://github.com/ropensci/dev_guide/blob/master/inst/book_grooming.R) now uses commonmark instead of regular expressions. If you're interesting in programmatic URL cleaning, you can also read [the recent rOpenSci tech note about cleaning a website URLs with R](https://ropensci.org/technotes/2019/12/19/urls-tidying/).
+Our [script checking URLs](https://github.com/ropensci/dev_guide/blob/master/inst/book_grooming.R) now uses commonmark instead of regular expressions. If you're interesting in programmatic URL cleaning, you can also read [the recent rOpenSci tech note about cleaning a website URLs with R](/technotes/2019/12/19/urls-tidying/).
 
 ### Conclusion
 
