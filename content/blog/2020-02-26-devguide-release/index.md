@@ -78,7 +78,7 @@ The ["Documentation" section of the packaging guide](https://devguide.ropensci.o
 All rOpenSci packages now have [a documentation website that's centrally build](/technotes/2019/06/07/ropensci-docs/).
 We've added [some elements helping package maintainers](https://devdevguide.netlify.com/building.html#website):
 
-* [improved guidance regarding the replacement of "older" pkgdown website links and source](https://devguide.ropensci.org/approvaltemplate.html)
+* [improved guidance regarding the replacement of "older" pkgdown website links and source](https://devguide.ropensci.org/approvaltemplate.html).
 
 * add package logo guidance. _To use your package logo in the pkgdown homepage, refer to [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html). If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci) will use rOpenSci logo instead._
 
