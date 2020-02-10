@@ -116,7 +116,7 @@ We've started using GitHub Actions instead of Travis for deployment. We've got t
 
 * whenever there's a commit in a PR from a repo that has `NETLIFY_SITE_ID` as secret i.e. most often the same repo and not forks, the book is built, deployed to Netlify, and a commit comment allows to find the preview URL. Getting the preview for any PR was the main motivation for our exploring a different deploy method. 
 
-If you want to know more about GitHub actions for R, we recommend [Jim Hester's slidedeck](https://speakerdeck.com/jimhester/github-actions-for-r) and [Emil Hvitfeldt's thorough walkthrough "Deploy your bookdown project to Netlify with Github Actions"](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/). You can also explore [our workflows](https://github.com/ropensci/dev_guide/tree/dev/.github/workflows).
+If you want to know more about GitHub actions for R, we recommend [Jim Hester's slidedeck](https://speakerdeck.com/jimhester/github-actions-for-r) and [Emil Hvitfeldt's thorough walkthrough "Deploy your bookdown project to Netlify with Github Actions"](https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/). You can also explore [our (probably improvable) workflows](https://github.com/ropensci/dev_guide/tree/dev/.github/workflows).
  
 #### URL checking
 
