@@ -24,13 +24,24 @@ twitterImg: img/blog-images/2019-05-16-dev-guide-update/cover.png
 ## New security guidance
 
  add more guidance about secrets and package development in the security chapter.
+ 
+ For further discussion on the same topic, see [this `vcr` issue about making tests pass in PRs in the absence of necessary secrets](https://github.com/ropensci/vcr/issues/137) 
 
 ## Policy and governance changes
 
 ### Policy changes
 
 add field and laboratory reproducibility tools as a category in scope.
+
 add guidance for off-thread interaction and COIs ([`@noamross`](https://github.com/noamross), #197).
+
+### Submission form amendments
+
+explicit mention of roxygen2. See https://yihui.org/rd2roxygen/
+
+explicit mention of the packaging guide and guide for authors
+
+explicit mention of Bioconductor like CRAN
 
 ### Editor guidance
 
@@ -88,5 +99,12 @@ Bioconductor
  
 ## Meta: changes in deployment
 
+### GitHub actions
+
 start using GitHub actions instead of Travis for deployment.
 
+ hvitfeldt.me/blog/bookdown-netlify-github-actions (that I didn't use, but that is a very thorough walkthrough) and speakerdeck.com/jimhester/github-actions-for-r.
+ 
+### URL checking
+
+Mention the script checking URLs now use commonmark instead of regular expressions, and add a link to ropensci.org/technotes/2019/12/19/urls-tidying
