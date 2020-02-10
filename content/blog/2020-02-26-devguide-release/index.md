@@ -50,7 +50,7 @@ _If you interact with the package authors and talked about the review outside a 
 
 Our [issue template for submissions](https://github.com/ropensci/software-review/blob/master/.github/ISSUE_TEMPLATE/A-submit-software-for-review.md) now:
 
-* explicitly mentions [`roxygen2`](https://roxygen2.r-lib.org/). If you used to write documentation the hard way, you can convert it using [`rd2roxygen`]( https://yihui.org/rd2roxygen/)
+* explicitly mentions [`roxygen2`](https://roxygen2.r-lib.org/). Prospective submitters, note that if you used to write documentation the hard way, you can convert it using [`rd2roxygen`]( https://yihui.org/rd2roxygen/).
 
 * explicitly mentions the packaging guide and guide for authors
 
