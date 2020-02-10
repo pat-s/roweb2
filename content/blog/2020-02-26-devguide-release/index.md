@@ -30,7 +30,7 @@ or this blog post for more digested information.
 Our dev guide always has had a chapter called ["Package Development Security Best Practices"](https://devguide.ropensci.org/package-development-security-best-practices.html) but it used to be quite empty. 
 We've now added more guidance about secrets and package development, including links to useful resources.
  
-For further discussion on the same topic, see [this `vcr` issue about making tests pass in PRs in the absence of necessary secrets](https://github.com/ropensci/vcr/issues/137).
+For further discussion on the same topic, see [this vcr issue about making tests pass in PRs in the absence of necessary secrets](https://github.com/ropensci/vcr/issues/137).
 
 ### Policy and governance changes
 
@@ -50,7 +50,7 @@ _If you interact with the package authors and talked about the review outside a 
 
 Our [issue template for submissions](https://github.com/ropensci/software-review/blob/master/.github/ISSUE_TEMPLATE/A-submit-software-for-review.md) now:
 
-* explicitly mentions [`roxygen2`](https://roxygen2.r-lib.org/). Prospective submitters, note that if you used to write documentation the hard way, you can convert it using [`rd2roxygen`]( https://yihui.org/rd2roxygen/).
+* explicitly mentions [roxygen2](https://roxygen2.r-lib.org/). Prospective submitters, note that if you used to write documentation the hard way, you can convert it using [rd2roxygen]( https://yihui.org/rd2roxygen/).
 
 * explicitly mentions the packaging guide and guide for authors
 
@@ -84,7 +84,7 @@ We've added [some elements helping package maintainers](https://devdevguide.netl
 
 * *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
 
-* How to use of mathjax with `rotemplate`, thanks to [Hugo Gruson](https://github.com/Bisaloo).
+* How to use of mathjax with rotemplate, thanks to [Hugo Gruson](https://github.com/Bisaloo).
 
 ### Misc
 
@@ -94,7 +94,7 @@ We've added two [CRAN gotchas](https://devguide.ropensci.org/building.html#crang
 
 * In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*).  Thanks [Aaron Wolen](https://github.com/aaronwolen)).
 
-* Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this. Thanks to [Hugo Gruson](https://github.com/Bisaloo).
+* Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [pkgdown documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this. Thanks to [Hugo Gruson](https://github.com/Bisaloo).
 
 #### Forum guidance
 
