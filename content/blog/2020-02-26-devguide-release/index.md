@@ -58,7 +58,7 @@ Our [issue template for submissions](https://github.com/ropensci/software-review
 
 #### Editor guidance
 
-We've updated the [Editor-in-chief role description](https://devguide.ropensci.org/editorguide.html#eicchecklist) to better describe current practice. tl;dr: editors trust the EiC and are busy.
+We've updated the [Editor-in-chief role description](https://devguide.ropensci.org/editorguide.html#eicchecklist) to better describe current practice. tl;dr: editors trust the EiC.
  
 We've improved the [guidance for the editor in charge of a dev guide release](https://devguide.ropensci.org/editorguide.html#bookrelease).
  
