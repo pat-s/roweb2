@@ -21,6 +21,8 @@ rOpenSci Packages: Development, Maintenance, and Peer Review'"
 twitterImg: img/blog-images/2019-05-16-dev-guide-update/cover.png
 ---
 
+ADD: ethics chapter, guest editor invite guide.
+
 rOpenSci Software Peer Review's guidance has been compiled in [an online book](https://devguide.ropensci.org/) for more than one year now. We've just released its fourth version. 
 To find out what's new in our dev guide 0.4.0, you can [read the changelog](https://devguide.ropensci.org/booknews.html), 
 or this blog post for more digested information.
@@ -85,6 +87,8 @@ We've added [some elements helping package maintainers](https://devdevguide.netl
 * *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
 
 * How to use of mathjax with rotemplate, thanks to [Hugo Gruson](https://github.com/Bisaloo).
+
+* A mention that all rOpenSci docs websites automatically have search enabled using Algolia. See e.g. [`pdftools` website](https://docs.ropensci.org/pdftools/).
 
 ### Misc
 
